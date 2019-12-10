@@ -3,15 +3,16 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
-function TodoList() {
+function TodoList(props) {
   return (
     <List>
-      <ListItem>
-        <ListItemText primary="プログラミング" />
-      </ListItem>
-      <ListItem>
-        <ListItemText primary="お買い物" />
-      </ListItem>
+      {
+        props.list.map((item, i) => (
+          <ListItem key={i}>
+            <ListItemText primary={item} />
+          </ListItem>
+        ))
+      }
     </List>
   );
 }
