@@ -2,12 +2,13 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-function Form() {
+function Form(props) {
   return (
     <form>
       <TextField
         name="value"
         label="やること"
+        value={props.value}
       />
       <Button
         type="submit"

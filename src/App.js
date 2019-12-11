@@ -7,6 +7,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       list: ['プログラミング', 'お買い物'],
+      value: '',
     };
   }
 
@@ -14,7 +15,9 @@ class App extends React.Component {
     return (
       <div>
         <h1>TODOアプリ</h1>
-        <Form />
+        <Form
+          value={this.state.value}
+        />
         <TodoList list={this.state.list} />
       </div>
     );
