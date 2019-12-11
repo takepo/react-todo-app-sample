@@ -9,6 +9,7 @@ function Form(props) {
         name="value"
         label="やること"
         value={props.value}
+        onChange={props.handleChange}
       />
       <Button
         type="submit"

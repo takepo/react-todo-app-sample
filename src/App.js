@@ -11,12 +11,17 @@ class App extends React.Component {
     };
   }
 
+  handleChange = (event) => {
+    this.setState({ value: event.target.value });
+  }
+
   render() {
     return (
       <div>
         <h1>TODOアプリ</h1>
         <Form
           value={this.state.value}
+          handleChange={this.handleChange}
         />
         <TodoList list={this.state.list} />
       </div>
