@@ -1,0 +1,8 @@
+.app {
+  margin: 24px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+}
