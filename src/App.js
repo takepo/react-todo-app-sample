@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoList from './TodoList';
+import Form from './Form';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>TODOアプリ</h1>
+        <Form />
         <TodoList list={this.state.list} />
       </div>
     );
