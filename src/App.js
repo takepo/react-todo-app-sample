@@ -15,6 +15,18 @@ class App extends React.Component {
     this.setState({ value: event.target.value });
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+
+    this.setState({
+      list: [
+        ...this.state.list,
+        this.state.value,
+      ],
+      value: '',
+    });
+  }
+
   render() {
     return (
       <div>
@@ -22,6 +34,7 @@ class App extends React.Component {
         <Form
           value={this.state.value}
           handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}
         />
         <TodoList list={this.state.list} />
       </div>
